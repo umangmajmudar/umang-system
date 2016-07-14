@@ -3,7 +3,8 @@ package com.test;
 public class Duplcates {
 
 	// array length is 100
-	// 
+	// exception will be thrown and handled if array is >100
+        // results will be sorted 
 	public static int[] removeDuplicate(int[] arr) {
 	    boolean[] bool = new boolean[100];
 	    int total = 0;
