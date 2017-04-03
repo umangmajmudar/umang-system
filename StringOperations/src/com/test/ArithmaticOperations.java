@@ -9,6 +9,14 @@ public class ArithmaticOperations {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		String msg = "Adding a url https://localhost:8443/abc, and one more gopher://text/1111111, and another <telnet://testing/9987654> test case#1";
+		//String withURL = msg.replaceAll("((https?|ftp|rdar|exp2|gopher|telnet|file):((//)|(\\\\))+[\\w\\d:#@%/;$()~_?\\+-=\\\\\\.&]*)", "<a href='$0'>$0</a>");
+		String withURL = msg.replaceAll("(?:https?|rdar?|exp2?|ftp?|file?|http?|telnet?|gopher?)://[\\w:[0-9]\\?\\=/%.-]+", "<a href='$0'>$0</a>");
+		
+		System.out.println(withURL);
+		System.exit(1);
+		
+		
 		// Binary to decimal
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter a Binary number ::: ");
